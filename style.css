@@ -26,7 +26,6 @@ body {
   letter-spacing: 1.2px;
   width: 100vw;
   overflow-x: hidden;
-  display: flex;
   background-color: var(--color-medium-green);
 }
 
@@ -149,10 +148,12 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 3em;
+  height: 2rem;
 }
 
-.lower-logo-bottom > * {
-  width: 100%;
+.lower-logo-bottom img {
+  width: auto;
+  height: 100%;
 }
 
 .side-panel {
@@ -209,8 +210,8 @@ body {
 
 .feature-box {
   display: grid;
-  /* grid-template-columns: 1fr, 2fr;
-  grid-template-rows: 1fr, 1fr; */
+  grid-template-columns: 1fr 2fr;
+  /* grid-template-rows: 1fr, 1fr;  */
   width: 65%;
 }
 
@@ -532,6 +533,7 @@ body {
   margin: auto;
   align-items: center;
   justify-content: center;
+  transition: 0.3s transform ease-in;
 }
 
 .footer-buttons-text:hover {
@@ -564,6 +566,7 @@ body {
 
   .lower-logo-bottom {
     display: flex;
+    justify-content: space-between;
   }
 
   .side-panel-heading-text {
@@ -601,5 +604,115 @@ body {
   .feature-box {
     justify-items: start;
     width: 85%;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .features {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  header {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+  }
+  header .side-panel {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+  }
+  .side-panel-photos {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .side-panel-heading {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+  }
+
+  body {
+    display: grid;
+    grid-template-columns: 3.5rem 1fr;
+  }
+  .navbar {
+    width: 130%;
+    height: 100%;
+  }
+  .navbar .nav-icon {
+    margin-right: 0;
+    margin-left: 0.1rem;
+    margin-right: 2.3em;
+    width: 10%;
+  }
+
+  .side-panel {
+    display: grid;
+    grid-template-rows: 3fr 2fr;
+  }
+
+  .side-panel-person-images {
+    width: 80%;
+    height: auto;
+    align-self: center;
+  }
+
+  .side-panel-heading-text {
+    display: grid;
+    align-items: end;
+  }
+
+  .person {
+    width: 70%;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-gap: 1em;
+    align-self: center;
+    justify-items: center;
+  }
+
+  .testimonials {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+  }
+
+  .right-text {
+    grid-column: 2/-1;
+  }
+
+  .left-images {
+    grid-column: 1/2;
+    grid-row: 1/-1;
+  }
+
+  .testimonials-image-1 {
+    width: 100%;
+  }
+
+  .testimonials-image-2 {
+    width: 110%;
+  }
+
+  .houses {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem 3rem;
+  }
+
+  .btn-testimonials {
+    height: 5em;
+  }
+
+  .footer-buttons {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 1rem;
   }
 }
