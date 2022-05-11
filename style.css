@@ -146,14 +146,13 @@ body {
 
 .lower-logo-bottom {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 3em;
-  height: 2rem;
 }
 
 .lower-logo-bottom img {
-  width: auto;
-  height: 100%;
+  width: 100%;
+  height: auto;
 }
 
 .side-panel {
@@ -559,6 +558,11 @@ s .copyright-text {
   .logo {
     margin: auto;
     width: 30%;
+  }
+
+  .lower-logo-bottom img {
+    width: 20%;
+    height: auto;
   }
 
   .lower-logos {
