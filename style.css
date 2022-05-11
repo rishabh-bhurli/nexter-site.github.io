@@ -541,11 +541,18 @@ body {
 
   transform: translateY(-5%);
 }
-
-.copyright-text {
+s .copyright-text {
   color: beige;
   text-align: center;
   font-size: clamp(1.1em, 0.8em, 1em);
+}
+
+@media screen and (min-width: 800px) {
+  .side-panel-photos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 2rem;
+  }
 }
 
 @media screen and (min-width: 750px) {
@@ -556,7 +563,7 @@ body {
 
   .lower-logos {
     justify-content: center;
-    margin-left: 5em;
+    /* margin-left: 5em; */
   }
 
   .lower-logos-lines {
@@ -574,23 +581,22 @@ body {
   }
 
   .person {
-    grid-row: 1/4;
-    /* grid-column: 1/-1; */
     padding: 0;
     display: flex;
+    /* width: 80%; */
   }
-  .person3 {
-    grid-row: 3/-1;
-    grid-column: 2/-1;
-    padding: 0;
-    display: flex;
+
+  .side-panel-person-images {
+    width: 25%;
+    height: auto;
   }
 
   .side-panel-photos {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     /* padding: 0 5vw 5vh 5vw; */
-    grid-row-gap: 4rem;
+    /* grid-row-gap: 4rem; */
+    grid-column-gap: 2rem;
   }
 
   .features {
@@ -620,23 +626,21 @@ body {
   header {
     display: grid;
     grid-template-columns: 3fr 2fr;
+    height: 100vh;
   }
   header .side-panel {
-    display: grid;
-    grid-template-rows: repeat(2, 1fr);
-    justify-items: center;
-    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
   .side-panel-photos {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    gap: 1rem;
   }
 
   .side-panel-heading {
-    display: flex;
-    justify-content: flex-end;
-    flex-direction: column;
+    align-self: center;
   }
 
   body {
@@ -652,11 +656,6 @@ body {
     margin-left: 0.1rem;
     margin-right: 2.3em;
     width: 10%;
-  }
-
-  .side-panel {
-    display: grid;
-    grid-template-rows: 3fr 2fr;
   }
 
   .side-panel-person-images {
@@ -709,6 +708,11 @@ body {
 
   .btn-testimonials {
     height: 5em;
+  }
+
+  .person-text {
+    padding: 1.2rem;
+    justify-self: start;
   }
 
   .footer-buttons {
